@@ -1,0 +1,26 @@
+# -*- coding=utf8 -*-
+
+import datetime
+
+dd = datetime.datetime.now()
+
+# 时间转换为字符串
+dd_str = dd.strftime("%Y/%m/%d %H:%M:%S")
+print(type(dd_str), "dd_str为 {}".format(dd_str))
+
+# 字符串转换为时间
+dd_date = datetime.datetime.strptime(dd_str, "%Y/%m/%d %H:%M:%S")
+print(type(dd_date), "dd_date为 {}".format(dd_date))
+
+dt = datetime.timedelta(hours=3)
+# 时间相加
+date_add = dd + dt
+print(date_add)
+
+# 时间相减
+date_del = dd - dt
+print(date_del)
+
+# 时区变更
+utc_time = datetime.datetime.utcnow()
+print(utc_time)
